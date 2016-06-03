@@ -1,0 +1,703 @@
+{
+    "user": {
+        "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6bnVsbCwiaWF0IjoxNDYyMzcyMTkwfQ.vtay3nU0b8XA1dFhbH5W_KZn0BujowFJWipo4EUOaXs"
+    },
+    "server": {
+        "urls": {
+            "base": "http://analytics.qcc-x.com",
+            "classifications": "/api/classifications",
+            "future": "/api/future-daily-quotes",
+            "spot": "/api/spot-daily-quotes",
+            "index": "/api/index-daily-quotes",
+            "volume-daily" : "/api/daily-quantity-numbers",
+            "volume-weekly" : "/api/weekly-quantity-numbers",
+            "volume-monthly" : "/api/monthly-quantity-numbers",
+            "volume-yearly" : "/api/annual-quantity-numbers"  
+        }
+    },
+    "futures": {
+        "exchangesX": {
+            "SHF": ["RB"]
+        },
+        "exchanges": {
+            "SHF": ["RB", "HC"],
+            "DCE": ["I", "J", "JM"],
+            "CZC": ["ZC"]
+        },
+        "exchanges_": {
+            "SHF": ["CU", "AL", "ZN", "PB", "AU", "AG", "RB", "RU", "FU", "WR", "BU", "HC", "NI", "SN"],
+            "CFE": ["IF", "IH", "IC", "TF", "T"],
+            "DCE": ["A", "M", "Y", "P", "C", "I", "JM", "J", "L", "V", "B", "JD", "FB", "BB", "PP", "CS"],
+            "CZC": ["WH", "OI", "CF", "SR", "RI", "ZC", "TA", "FG", "MA", "RM", "RS", "PM", "JR", "LR", "LR", "SM", "SF"]
+        }
+    },
+    "indexes": {
+        "start": "2000-01-01",
+        "国外指数日价格": {
+            "铁矿石": [
+                {
+                    "wind_id": "S5707508",
+                    "specs": "TSI铁矿石价格指数 62%Fe",
+                    "unit": "美元/吨",
+                    "sector": "黑色",
+                    "asset_group": "矿"
+                },
+                {
+                    "wind_id": "S5705176",
+                    "specs": "普氏铁矿石价格指数 62%Fe CFR中国北方",
+                    "unit": "美元/吨",
+                    "sector": "黑色",
+                    "asset_group": "矿"
+
+                },
+                {
+                    "wind_id": "S5708232",
+                    "specs": "MyIpic指数 进口矿 综合",
+                    "unit": "",
+                    "sector": "黑色",
+                    "asset_group": "矿"
+                },
+                {
+                    "wind_id": "S5708233",
+                    "specs": "MyIpic指数 国产矿 综合",
+                    "unit": "",
+                    "sector": "黑色",
+                    "asset_group": "矿"
+                }
+            ],
+            "动力煤": [
+                {
+                    "wind_id": "S0028294",
+                    "specs": "澳大利亚BJ动力煤现货价",
+                    "unit": "美元/吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                }
+            ]
+        }
+    },
+    "volumes":{
+        "start":"2000-01-01",
+        "国内日数量": {
+            "铁矿石": [
+                {
+                    "wind_id": "S5709303",
+                    "origin": "中国",
+                    "category":"开工率",
+                    "specs":"矿山开工率：铁精粉:全国:当期值",
+                    "unit": "%",
+                    "sector": "黑色",
+                    "asset_group": "矿"
+                }
+            ],
+            "螺纹钢": [
+                {
+                    "wind_id": "S5708246",
+                    "origin": "中国钢铁工业协会",
+                    "category":"产量",
+                    "specs":"日均产量：粗钢:重点企业(旬)",
+                    "unit": "万吨/天",
+                    "sector": "黑色",
+                    "asset_group": "钢材"
+                }
+            ]
+        },
+
+        "国内周数量":{
+            "铁矿石": [
+                {
+                    "wind_id": "S0110152",
+                    "origin": "港口(Mysteel)",
+                    "category":"库存",
+                    "specs":"港口合计",
+                    "unit": "万吨",
+                    "sector": "黑色",
+                    "asset_group": "矿"
+                }
+            ],
+            "螺纹钢": [
+                {
+                    "wind_id": "S0181750",
+                    "origin": "Wind资讯",
+                    "category":"库存",
+                    "specs":"库存:螺纹钢(含上海全部仓库)",
+                    "unit": "万吨",
+                    "sector": "黑色",
+                    "asset_group": "钢材"
+                }
+            ],
+            "热轧卷板": [
+                {
+                    "wind_id": "S0110143",
+                    "origin": "Wind资讯",
+                    "category":"库存",
+                    "specs":"库存:热卷(板)",
+                    "unit": "万吨",
+                    "sector": "黑色",
+                    "asset_group": "钢材"
+                }
+            ],
+            "冶金焦炭": [
+                {
+                    "wind_id": "S5118169",
+                    "origin": "根据新闻整理",
+                    "category":"开工率",
+                    "specs":"开工率:国内独立焦化厂:西南地区",
+                    "unit": "%",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S5120058",
+                    "origin": "Wind资讯",
+                    "category":"库存",
+                    "specs":"焦炭库存:天津港",
+                    "unit": "万吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                }
+            ],
+            "焦煤": [
+                {
+                    "wind_id": "S5125686",
+                    "origin": "根据新闻整理",
+                    "category":"库存",
+                    "specs":"炼焦煤库存:六港口合计",
+                    "unit": "万吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                }
+            ]
+        },
+        "国内月数量": {
+            "铁矿石":[
+                {
+                    "wind_id": "M0041571",
+                    "origin": "海关总署",
+                    "category":"进出口",
+                    "specs":"进口数量：铁矿砂及其精矿:当月值",
+                    "unit": "万吨",
+                    "sector": "黑色",
+                    "asset_group": "矿"
+                },
+                {
+                    "wind_id": "S0027366",
+                    "origin": "国家统计局",
+                    "category":"产量",
+                    "specs":"铁矿石原矿量:当月值",
+                    "unit": "万吨",
+                    "sector": "黑色",
+                    "asset_group": "矿"
+                }
+            ],
+            "螺纹钢": [
+                {
+                    "wind_id": "S0027490",
+                    "origin": "海关总署",
+                    "category":"进出口",
+                    "specs":"进口数量:钢材:当月值",
+                    "unit": "万吨",
+                    "sector": "黑色",
+                    "asset_group": "钢材"
+                }
+            ],
+            "热轧卷板": [
+                {
+                    "wind_id": "S0027517",
+                    "origin": "海关总署",
+                    "category":"进出口",
+                    "specs":"出口数量:板材:当月值",
+                    "unit": "万吨",
+                    "sector": "黑色",
+                    "asset_group": "钢材"
+                }
+            ],
+            "冶金焦炭": [
+                {
+                    "wind_id": "S0026997",
+                    "origin": "国家统计局",
+                    "category":"产量",
+                    "specs":"产量:焦炭:当月值",
+                    "unit": "万吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S5118227",
+                    "origin": "海关总署",
+                    "category":"进出口",
+                    "specs":"进口数量:焦炭及半焦炭:当月值",
+                    "unit": "万吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S0027007",
+                    "origin": "海关总署",
+                    "category":"进出口",
+                    "specs":"出口数量:焦炭及半焦炭:当月值",
+                    "unit": "万吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                }
+            ],
+            "焦煤": [
+                {
+                    "wind_id": "S5118233",
+                    "origin": "Wind资讯",
+                    "category":"产量",
+                    "specs":"产量:炼焦煤(炼焦精煤):当月值",
+                    "unit": "万吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S5118231",
+                    "origin": "海关总署",
+                    "category":"进出口",
+                    "specs":"进口数量:炼焦煤:当月值",
+                    "unit": "万吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S5118232",
+                    "origin": "海关总署",
+                    "category":"进出口",
+                    "specs":"出口数量:炼焦煤:当月值",
+                    "unit": "万吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                }
+            ],
+            "动力煤": [
+                {
+                    "wind_id": "S0026989",
+                    "origin": "煤炭运销协会",
+                    "category":"产量",
+                    "specs":"产量:原煤:当月值",
+                    "unit": "万吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S0173743",
+                    "origin": "海关总署",
+                    "category":"进出口",
+                    "specs":"进口数量:煤及褐煤:当月值",
+                    "unit": "万吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S0173737",
+                    "origin": "海关总署",
+                    "category":"进出口",
+                    "specs":"出口数量:煤及褐煤:当月值",
+                    "unit": "万吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S5103712",
+                    "origin": "Wind资讯",
+                    "category":"库存",
+                    "specs":"煤炭库存:重要港口:北方七港:秦皇岛港",
+                    "unit": "万吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                }
+            ]
+        },
+
+        "国外日数量":{
+
+        },
+
+        "国外周数量":{
+
+        },
+
+        "国外月数量":{
+
+        }
+    },
+    "spots": {
+        "start": "2000-01-01",
+        "国外现货日价格": {
+            "冶金焦炭": [
+                {
+                    "wind_id": "S5120161",
+                    "origin": "中国FOB",
+                    "specs": "现货价 冶金焦(CSR62%,中国产) 中国离岸",
+                    "unit": "美元/吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                }
+            ],
+            "动力煤": [
+                {
+                    "wind_id": "S5101712",
+                    "origin": "澳大利亚",
+                    "specs": "纽卡斯尔NEWC动力煤现货价",
+                    "unit": "美元/吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                }
+            ],
+            "铁矿石": [
+                {
+                    "wind_id": "S0110172",
+                    "origin": "澳大利亚",
+                    "specs": "车板价 连云港 PB粉矿 61.5%",
+                    "unit": "元/湿吨",
+                    "sector": "黑色",
+                    "asset_group": "矿"
+                },
+                {
+                    "wind_id": "S0110182",
+                    "origin": "澳大利亚",
+                    "specs": "车板价 日照港 PB粉矿 61.5%",
+                    "unit": "元/湿吨",
+                    "sector": "黑色",
+                    "asset_group": "矿"
+                },
+                {
+                    "wind_id": "S0167713",
+                    "origin": "澳大利亚",
+                    "specs": "车板价 天津港 PB粉矿 61.5%",
+                    "unit": "元/湿吨",
+                    "sector": "黑色",
+                    "asset_group": "矿"
+                },
+                {
+                    "wind_id": "S0183606",
+                    "origin": "澳大利亚",
+                    "specs": "车板价 京唐港 PB粉 61.5%",
+                    "unit": "元/湿吨",
+                    "sector": "黑色",
+                    "asset_group": "矿"
+                },
+                {
+                    "wind_id": "S0183618",
+                    "origin": "澳大利亚",
+                    "specs": "车板价 江阴港 PB粉 61.5%",
+                    "unit": "元/湿吨",
+                    "sector": "黑色",
+                    "asset_group": "矿"
+                },
+                {
+                    "wind_id": "S5707543",
+                    "origin": "澳大利亚",
+                    "specs": "车板价 防城港 PB粉矿 61%",
+                    "unit": "元/湿吨",
+                    "sector": "黑色",
+                    "asset_group": "矿"
+                }
+            ],
+            "焦煤": [
+                {
+                    "wind_id": "S5112223",
+                    "origin": "澳大利亚",
+                    "specs": "天津港 库提价(含税) 主焦煤(A<8%,V28%,0.8%S,G95,Y20mm) 澳大利亚产",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S5101460",
+                    "origin": "澳大利亚",
+                    "specs": "日照港 车板价(含税) 主焦煤(A9.5%,V<20%,0.3%S,G80,Y21mm) 澳大利亚产",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S5112232",
+                    "origin": "澳大利亚",
+                    "specs": "京唐港 库提价 主焦煤(A9%,V26%,0.4%S,G87,Y15mm) 澳大利亚产",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S5112234",
+                    "origin": "澳大利亚",
+                    "specs": "京唐港 库提价 1/3焦煤(A11%,V30%,0.7%S,G82,Y16mm) 澳大利亚产",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S5120157",
+                    "origin": "澳大利亚",
+                    "specs": "现货价 中低挥发分硬焦煤(CSR64%,V25.5%,A9.0%,S0.6%,P0.05%,澳大利亚产) 澳洲离岸",
+                    "unit": "美元/吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S5120158",
+                    "origin": "澳大利亚",
+                    "specs": "现货价 中低挥发分硬焦煤(CSR64%,V25.5%,A9.0%,S0.6%,P0.05%,澳大利亚产) 中国到岸",
+                    "unit": "美元/吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S5120152",
+                    "origin": "澳大利亚",
+                    "specs": "现货价 优质低挥发硬焦煤(CSR71%,V21.5%,A9.3%,S0.5%,P0.045%,澳大利亚产) 中国到岸",
+                    "unit": "美元/吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S5120155",
+                    "origin": "澳大利亚",
+                    "specs": "现货价 峰景矿硬焦煤(CSR74%,V20.7%,A10.5%,S0.6%,P0.03%,澳大利亚产) 中国到岸",
+                    "unit": "美元/吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                }
+            ]
+        },
+        "国内现货日价格": {
+            "螺纹钢": [
+                {
+                    "wind_id": "S0033228",
+                    "origin": "沈阳",
+                    "specs": "螺纹钢 HRB400 20mm",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "钢材"
+                },
+                {
+                    "wind_id": "S0033213",
+                    "origin": "北京",
+                    "specs": "螺纹钢 HRB400 20mm",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "钢材"
+                },
+                {
+                    "wind_id": "S0073207",
+                    "origin": "天津",
+                    "specs": "螺纹钢 HRB400 20mm",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "钢材"
+                },
+                {
+                    "wind_id": "S0033227",
+                    "origin": "上海",
+                    "specs": "螺纹钢 HRB400 20mm",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "钢材"
+                },
+                {
+                    "wind_id": "S0033217",
+                    "origin": "广州",
+                    "specs": "螺纹钢 HRB400 20mm",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "钢材"
+                }
+            ],
+            "铁矿石": [
+                {
+                    "wind_id": "S0033115",
+                    "origin": "迁西",
+                    "specs": "铁精粉 66% 干基含税",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "矿"
+                },
+                {
+                    "wind_id": "S0175567",
+                    "origin": "通化",
+                    "specs": "铁精粉 66% 干基含税",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "矿"
+                },
+                {
+                    "wind_id": "S0175587",
+                    "origin": "莱芜",
+                    "specs": "铁精粉 64% 干基含税",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "矿"
+                },
+                {
+                    "wind_id": "S0175599",
+                    "origin": "马鞍山",
+                    "specs": "铁精粉 64% 干基含税",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "矿"
+                },
+                {
+                    "wind_id": "S0033124",
+                    "origin": "邯郸",
+                    "specs": "铁精粉 66% 干基不含税",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "矿"
+                }
+            ],
+            "冶金焦炭": [
+                {
+                    "wind_id": "S5120128",
+                    "origin": "山西",
+                    "specs": "车板价 一级冶金焦(A<12.5%,S<0.7%,Mt<8%,M25>90%,CSR>60%,太原产)",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S5118429",
+                    "origin": "天津港",
+                    "specs": "平仓价(含税) 准一级冶金焦(A<12.5%,<0.7%S,CSR>60%,Mt8%)",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S5120142",
+                    "origin": "内蒙古",
+                    "specs": "车板价 二级冶金焦(A<13.5%,S<0.8%,Mt<8%,M40>82%,CSR>60%,乌海产)",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S0033507",
+                    "origin": "唐山",
+                    "specs": "到厂价(含税) 二级冶金焦(A13.5%,0.7%S)",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S5118264",
+                    "origin": "上海",
+                    "specs": "到厂价(含税) 二级冶金焦",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                }
+            ],
+            "焦煤": [
+                {
+                    "wind_id": "S5112240",
+                    "origin": "京唐港",
+                    "specs": "库提价(含税) 主焦煤(A8%,V25%,0.9%S,G85)",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S5112235",
+                    "origin": "京唐港",
+                    "specs": "库提价(含税) 主焦煤(A10%,V24%,<0.8%S,G80)",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S5101440",
+                    "origin": "甘其毛道",
+                    "specs": "库提价(含税) 焦煤(A23%,V26%,<0.6%S,G85)",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                }
+            ],
+            "动力煤": [
+                {
+                    "wind_id": "S5120089",
+                    "origin": "秦皇岛",
+                    "specs": "市场价 动力煤(Q5500,山西产)",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S5101385",
+                    "origin": "京唐港",
+                    "specs": "平仓价 动力末煤(Q5500) 山西产",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S5101482",
+                    "origin": "广州港",
+                    "specs": "库提价 澳洲煤(A20%,V28%,0.7%S,Q5500)",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                },
+                {
+                    "wind_id": "S5104584",
+                    "origin": "曹妃甸港",
+                    "specs": "平仓价 动力煤(Q5500K)",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "煤焦"
+                }
+            ],
+            "热轧卷板": [
+                {
+                    "wind_id": "S5708299",
+                    "origin": "上海",
+                    "specs": "热轧板卷 Q345 5.75mm",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "钢材"
+                },
+                {
+                    "wind_id": "S5708307",
+                    "origin": "广州",
+                    "specs": "热轧板卷 Q345 5.75mm",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "钢材"
+                },
+                {
+                    "wind_id": "S5708312",
+                    "origin": "北京",
+                    "specs": "热轧板卷 Q345 5.75mm",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "钢材"
+                },
+                {
+                    "wind_id": "S5708313",
+                    "origin": "天津",
+                    "specs": "热轧板卷 Q345 5.75mm",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "钢材"
+                },
+                {
+                    "wind_id": "S5708317",
+                    "origin": "沈阳",
+                    "specs": "热轧板卷 Q345 5.75mm",
+                    "unit": "元/吨",
+                    "sector": "黑色",
+                    "asset_group": "钢材"
+                }
+            ]
+        }
+    },
+    "format": {
+        "exceptions": {
+            "ZC": 3
+        }
+    },
+    "defaults": {
+    }
+}

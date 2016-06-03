@@ -1,0 +1,15 @@
+Package: QCC
+Type: Package
+Title: Extract data from database
+Version: 0.1.0
+Author: Hua Song
+Maintainer: Hua Song <huasong0916@gmail.com>
+Description: The package "QCC" is mainly for extracting data from QCC database. It contains functions that can retrieve fundamental data and quote data respectively. With the desired time period and time type inputted into each function, functions outputs a data frame containing all the user desired data.
+License: MIT
+LazyData: TRUE
+Dependencies: RJSONIO, stringr
+Collate:
+    'getFundamentalData.R'
+    'getQuoteData.R'
+    'qcc.R'
+RoxygenNote: 5.0.1
